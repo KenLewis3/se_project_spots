@@ -20,6 +20,10 @@
   opacity: 40%;
 }
 
+.card_like-button:hover {
+  opacity: 100%;
+}
+
 .card_content {
   display: flex;
   align-items: center;
@@ -30,6 +34,10 @@
 
 .card_title {
   margin: 0;
+  max-width: 353px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 627px) {

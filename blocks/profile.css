@@ -22,12 +22,22 @@
 .profile_name {
   margin: 0;
   font-size: 32px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile_description {
   margin: 12px 0 0 0;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile_edit-button {
@@ -40,6 +50,16 @@
   align-items: center;
   gap: 8px;
   color: #212121;
+}
+
+.profile_edit-button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.profile__edit-pencil:hover {
+  color: black;
+  cursor: pointer;
 }
 
 .profile_newpost-button {
@@ -56,6 +76,11 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.profile_newpost-button:hover {
+  opacity: 70%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
