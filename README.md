@@ -1,21 +1,23 @@
 # Project 3: Spots
 
-### Overview  
+The Spots is the second project I’ve created using HTML and CSS. Spots is a social media site where you can upload photos to your image gallery. There is a space for your name, occupation, and profile photo as well. The buttons were equipped with hover effects, which makes it easier for users to interact with the page. Responsive design is important, so creating a flexible layout was necessary. Images for the layout were done using grid and CSS styling. For the users with longer names, occupation, and image captions, hide text overflow was implemented into the layout.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Project Features
+
+- Semantic HTML5
+- Flat BEM file structure
+- Flexbox
+- Grid
+- CSS Hover effects
+- Media Queries
+- Hide text overflow
+
+## Plan on improving the project
+
+- Add color to like button when a user clicks on it.
+- Make the grid bigger so more images can be uploaded.
+- Add the ability to place images in specific order while in ‘Edit Profile’.
+
+## Link to Project
+
+<https://github.com/KenLewis3/se_project_spots>
