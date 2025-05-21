@@ -21,3 +21,7 @@ The Spots is the second project I’ve created using HTML and CSS. Spots is a so
 ## Link to Project
 
 <https://github.com/KenLewis3/se_project_spots>
+
+## Link to Video
+
+<https://drive.google.com/file/d/1WXWKzh22Uq1HZyf2WgkanlgZcrmzY-L4/view?usp=sharing>
