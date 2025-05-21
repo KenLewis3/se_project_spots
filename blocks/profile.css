@@ -14,12 +14,12 @@
   width: 190px;
 }
 
-.profile_column {
+.profile__column {
   display: flex;
   flex-direction: column;
 }
 
-.profile_name {
+.profile__name {
   margin: 0;
   font-size: 32px;
   text-overflow: ellipsis;
@@ -29,7 +29,7 @@
   -webkit-box-orient: vertical;
 }
 
-.profile_description {
+.profile__description {
   margin: 12px 0 0 0;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -40,7 +40,7 @@
   -webkit-box-orient: vertical;
 }
 
-.profile_edit-button {
+.profile__edit-button {
   margin-top: auto;
   font-size: 16px;
   border: none;
@@ -52,7 +52,7 @@
   color: #212121;
 }
 
-.profile_edit-button:hover {
+.profile__edit-button:hover {
   color: black;
   cursor: pointer;
 }
@@ -62,7 +62,7 @@
   cursor: pointer;
 }
 
-.profile_newpost-button {
+.profile__newpost-button {
   margin-left: auto;
   width: 149px;
   height: 52px;
@@ -78,7 +78,7 @@
   gap: 8px;
 }
 
-.profile_newpost-button:hover {
+.profile__newpost-button:hover {
   opacity: 70%;
   cursor: pointer;
 }
@@ -98,25 +98,25 @@
     margin-bottom: 12px;
   }
 
-  .profile_edit-button {
+  .profile__edit-button {
     justify-content: center;
   }
 
-  .profile_name {
+  .profile__name {
     font-size: 20px;
     margin-bottom: 6px;
   }
 
-  .profile_description {
+  .profile__description {
     margin-bottom: 32px;
     font-size: 16px;
   }
 
-  .profile_column {
+  .profile__column {
     margin-bottom: 20px;
   }
 
-  .profile_newpost-button {
+  .profile__newpost-button {
     margin: 0;
     width: 100%;
   }
