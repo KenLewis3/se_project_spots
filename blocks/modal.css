@@ -78,7 +78,7 @@
     color: rgba(21, 21, 21, .3);
 }
 
-.form__submit-button {
+.modal__submit-button {
     max-width: 156px;
     width: 100%;
     height: 52px;
