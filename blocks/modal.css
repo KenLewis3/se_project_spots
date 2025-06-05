@@ -10,10 +10,13 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease;
 }
 
 .modal__is-opened {
     visibility: visible;
+    opacity: 1;
 }
 
 .modal__container {
