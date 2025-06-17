@@ -1,3 +1,12 @@
+const initialCards = [
+    { name: "Hen Kaznelson", link: "https://unsplash.com/photos/a-busy-street-in-tokyo-japan-6B3Nb71JvFw" },
+    { name: "Anqi Lu", link: "https://unsplash.com/photos/a-tall-building-with-lots-of-windows-and-balconies-Xez0GVcPr_4"},
+    { name: "Annie Spratt", link: "https://unsplash.com/photos/a-group-of-people-waiting-for-a-train-at-a-train-station-j_qk1eVoAz0"},
+    { name: "Chitto Cancio", link: "https://unsplash.com/photos/grayscale-photography-of-man-EtelvFxuw2c"},
+    { name: "Yoav Aziz", link: "https://unsplash.com/photos/men-in-black-suits-standing-in-the-hallway-tKCd-IWc4gI"},
+    { name: "Story Zangu", link: "https://unsplash.com/photos/three-people-pose-in-a-market-shop-K7kTlqq2S00"},
+ ];
+
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const profileCloseButton = editProfileModal.querySelector(".modal__close-button");
@@ -62,4 +71,7 @@ function handleAddCardSubmit(evt) {
 
 addCardFormElement.addEventListener('submit', handleAddCardSubmit);
 
-  
+initialCards.forEach(function (item) {
+    console.log(item.name);
+    console.log(item.link);
+});
