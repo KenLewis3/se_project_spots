@@ -54,7 +54,8 @@ function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileNameElement.textContent = nameInput.value;
     profileDescriptionElement.textContent = descriptionInput.value;
-    editProfileModal.classList.remove("modal_is-opened");
+    //editProfileModal.classList.remove("modal_is-opened");
+    closeModal(editProfileModal);
 };
 
 profileFormElement.addEventListener('submit', handleProfileFormSubmit);
@@ -66,7 +67,8 @@ function handleAddCardSubmit(evt) {
         link: linkInput.value,
     };
     console.log(cardInputValues);
-    newPostModal.classList.remove("modal_is-opened");
+    //newPostModal.classList.remove("modal_is-opened");
+    closeModal(newPostModal);
 };
 
 addCardFormElement.addEventListener('submit', handleAddCardSubmit);
