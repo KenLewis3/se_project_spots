@@ -1,10 +1,10 @@
 const initialCards = [
-    { name: "Hen Kaznelson", link: "https://unsplash.com/photos/a-busy-street-in-tokyo-japan-6B3Nb71JvFw" },
-    { name: "Anqi Lu", link: "https://unsplash.com/photos/a-tall-building-with-lots-of-windows-and-balconies-Xez0GVcPr_4"},
-    { name: "Annie Spratt", link: "https://unsplash.com/photos/a-group-of-people-waiting-for-a-train-at-a-train-station-j_qk1eVoAz0"},
-    { name: "Chitto Cancio", link: "https://unsplash.com/photos/grayscale-photography-of-man-EtelvFxuw2c"},
-    { name: "Yoav Aziz", link: "https://unsplash.com/photos/men-in-black-suits-standing-in-the-hallway-tKCd-IWc4gI"},
-    { name: "Story Zangu", link: "https://unsplash.com/photos/three-people-pose-in-a-market-shop-K7kTlqq2S00"},
+    { name: "Hen Kaznelson", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg" },
+    { name: "Anqi Lu", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg"},
+    { name: "Annie Spratt", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg"},
+    { name: "Chitto Cancio", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"},
+    { name: "Yoav Aziz", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"},
+    { name: "Story Zangu", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"},
  ];
 
 const editProfileButton = document.querySelector(".profile__edit-button");
@@ -23,6 +23,34 @@ const linkInput = newPostModal.querySelector("#card-image-input");
 
 const profileNameElement = document.querySelector(".profile__name");
 const profileDescriptionElement = document.querySelector(".profile__description");
+
+const cardTemplate = document.querySelector("#card-template");
+
+const cardList = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+    const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
+    const cardTitle = cardElement.querySelector(".card__title");
+    const cardImage = cardElement.querySelector(".card__image");
+    
+    cardImage.src = data.link;
+    cardImage.alt = data.name;
+    cardTitle.textContent = data.name;
+
+    const likeButton = cardElement.querySelector(".card__like-button");
+    likeButton.addEventListener("click", () => {
+        likeButton.classList.toggle("card__like-button_active");
+    });
+
+    const deleteButton = cardElement.querySelector(".card__delete-button");
+    deleteButton.addEventListener("click", () => {
+        cardElement.remove();
+        //deleteButton.closest(".card").remove;
+    });
+
+    return cardElement;
+    console.log(cardElement);
+};
 
 function openModal(modal) {
     modal.classList.add("modal_is-opened");
@@ -50,30 +78,45 @@ newPostCloseButton.addEventListener("click", () => {
     closeModal(newPostModal);
 });
 
-function handleProfileFormSubmit(evt) {
+profileFormElement.addEventListener("submit", function (evt) {
     evt.preventDefault();
     profileNameElement.textContent = nameInput.value;
     profileDescriptionElement.textContent = descriptionInput.value;
-    //editProfileModal.classList.remove("modal_is-opened");
     closeModal(editProfileModal);
-};
+});
 
-profileFormElement.addEventListener('submit', handleProfileFormSubmit);
 
-function handleAddCardSubmit(evt) {
+addCardFormElement.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    const cardInputValues = {
-        title: imageTitleInput.value,
+    const inputValues = {
+        name: imageTitleInput.value,
         link: linkInput.value,
-    };
-    console.log(cardInputValues);
-    //newPostModal.classList.remove("modal_is-opened");
-    closeModal(newPostModal);
-};
+    } 
+    const cardElement = getCardElement(inputValues);
+    cardList.prepend(cardElement);
 
-addCardFormElement.addEventListener('submit', handleAddCardSubmit);
+    closeModal(newPostModal);
+});
+
+//function getCardElement(data) {
+    //const cardElement = cardTemplate.content.querySelector(".card");
+    //};
 
 initialCards.forEach(function (item) {
-    console.log(item.name);
-    console.log(item.link);
+    const cardElement = getCardElement(item);
+    cardList.append(cardElement);
 });
+
+
+
+//Another option for cardTemplate 
+//document.querySelector("#card-template")
+//.content.querySelector(".card");
+//const cardElement = cardTemplate.cloneNode(true); inside function
+
+//{ name: "Hen Kaznelson", link: "https://unsplash.com/photos/a-busy-street-in-tokyo-japan-6B3Nb71JvFw" },
+    //{ name: "Anqi Lu", link: "https://unsplash.com/photos/a-tall-building-with-lots-of-windows-and-balconies-Xez0GVcPr_4"},
+    //{ name: "Annie Spratt", link: "https://unsplash.com/photos/a-group-of-people-waiting-for-a-train-at-a-train-station-j_qk1eVoAz0"},
+    //{ name: "Chitto Cancio", link: "https://unsplash.com/photos/grayscale-photography-of-man-EtelvFxuw2c"},
+    //{ name: "Yoav Aziz", link: "https://unsplash.com/photos/men-in-black-suits-standing-in-the-hallway-tKCd-IWc4gI"},
+    //{ name: "Story Zangu", link: "https://unsplash.com/photos/three-people-pose-in-a-market-shop-K7kTlqq2S00"},
