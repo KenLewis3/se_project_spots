@@ -112,6 +112,7 @@ addCardFormElement.addEventListener('submit', function (evt) {
     const cardElement = getCardElement(inputValues);
     cardList.prepend(cardElement);
 
+    console.log(inputValues);
     closeModal(newPostModal);
 });
 

@@ -11,10 +11,11 @@ The Spots is the second project I’ve created using HTML and CSS. Spots is a so
 - CSS Hover effects
 - Media Queries
 - Hide text overflow
+- Click listeners
+- 
 
 ## Plan on improving the project
 
-- Add color to like button when a user clicks on it.
 - Make the grid bigger so more images can be uploaded.
 - Add the ability to place images in specific order while in ‘Edit Profile’.
 
