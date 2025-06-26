@@ -1,13 +1,3 @@
-const initialCards = [
-    { name: "Golden Gate Bridge", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"},
-    { name: "Hen Kaznelson", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg" },
-    { name: "Anqi Lu", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg"},
-    { name: "Annie Spratt", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg"},
-    { name: "Chitto Cancio", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"},
-    { name: "Yoav Aziz", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"},
-    { name: "Story Zangu", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"},
- ];
-
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const profileCloseButton = editProfileModal.querySelector(".modal__close-button");
@@ -111,6 +101,8 @@ addCardFormElement.addEventListener('submit', function (evt) {
     } 
     const cardElement = getCardElement(inputValues);
     cardList.prepend(cardElement);
+    imageTitleInput.value = "";
+    linkInput.value = "";
 
     console.log(inputValues);
     closeModal(newPostModal);
@@ -123,6 +115,7 @@ addCardFormElement.addEventListener('submit', function (evt) {
 initialCards.forEach(function (item) {
     const cardElement = getCardElement(item);
     cardList.append(cardElement);
+    
 });
 
 
@@ -131,10 +124,3 @@ initialCards.forEach(function (item) {
 //document.querySelector("#card-template")
 //.content.querySelector(".card");
 //const cardElement = cardTemplate.cloneNode(true); inside function
-
-//{ name: "Hen Kaznelson", link: "https://unsplash.com/photos/a-busy-street-in-tokyo-japan-6B3Nb71JvFw" },
-    //{ name: "Anqi Lu", link: "https://unsplash.com/photos/a-tall-building-with-lots-of-windows-and-balconies-Xez0GVcPr_4"},
-    //{ name: "Annie Spratt", link: "https://unsplash.com/photos/a-group-of-people-waiting-for-a-train-at-a-train-station-j_qk1eVoAz0"},
-    //{ name: "Chitto Cancio", link: "https://unsplash.com/photos/grayscale-photography-of-man-EtelvFxuw2c"},
-    //{ name: "Yoav Aziz", link: "https://unsplash.com/photos/men-in-black-suits-standing-in-the-hallway-tKCd-IWc4gI"},
-    //{ name: "Story Zangu", link: "https://unsplash.com/photos/three-people-pose-in-a-market-shop-K7kTlqq2S00"},

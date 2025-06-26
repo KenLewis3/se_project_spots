@@ -19,6 +19,7 @@
   opacity: 100%;
   width: 32px;
   height: 32px;
+  cursor: pointer;
 }
 
 .card__image {
@@ -27,6 +28,10 @@
   object-fit: cover;
   border-radius: 8px;
   display: block; /* removes space between image and caption */
+}
+
+.card__image:hover {
+  cursor: pointer;
 }
 
 .card__title {
