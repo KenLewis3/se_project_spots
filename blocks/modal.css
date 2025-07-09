@@ -168,6 +168,10 @@
   margin: 8px 0 0;
 }
 
+.button_inactive {
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 627px) {
   .modal__close-type-preview {
     top: -48px;
