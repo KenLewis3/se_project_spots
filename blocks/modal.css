@@ -168,8 +168,9 @@
   margin: 8px 0 0;
 }
 
-.button_inactive {
+.modal__submit-button_inactive {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 627px) {
