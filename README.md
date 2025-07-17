@@ -12,7 +12,6 @@ The Spots is the second project I’ve created using HTML and CSS. Spots is a so
 - Media Queries
 - Hide text overflow
 - Click listeners
-- 
 
 ## Plan on improving the project
 
