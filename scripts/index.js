@@ -63,7 +63,9 @@ const cardList = document.querySelector(".cards__list");
 
 const modals = document.querySelectorAll(".modal");
 
-const closeButtons = document.querySelectorAll(".modal__close-button");
+const closeButtons = document.querySelectorAll(
+  ".modal__close-button, .modal__close-type-preview"
+);
 
 function clickToCloseOpenModal(event) {
   if (event.target === event.currentTarget) {
@@ -136,10 +138,6 @@ closeButtons.forEach((button) => {
   button.addEventListener("click", () => closeModal(modal));
 });
 
-previewCloseButton.addEventListener("click", () => {
-  closeModal(previewModal);
-});
-
 newPostButton.addEventListener("click", () => {
   openModal(newPostModal);
 });
@@ -157,10 +155,8 @@ addCardFormElement.addEventListener("submit", function (evt) {
     name: imageTitleInput.value,
     link: linkInput.value,
   };
-  const cardElement = getCardElement(inputValues);
-  cardList.prepend(cardElement);
+  renderCard(inputValues);
   addCardFormElement.reset();
-  disableButton(cardSubmitButton, settings);
 
   closeModal(newPostModal);
 });
